@@ -17,8 +17,8 @@
 
 #include <iBtn_Fuzzer_icons.h>
 
-#include <lib/one_wire/ibutton/ibutton_worker.h>
-#include <lib/one_wire/ibutton/ibutton_key.h>
+#include <lib/ibutton/ibutton_worker.h>
+#include <lib/ibutton/ibutton_key.h>
 
 #define TAG "iBtnFuzzer"
 
@@ -73,6 +73,8 @@ typedef struct {
     iBtnFuzzerProtos proto;
     FuriString* attack_name;
     FuriString* proto_name;
+    FuriString* main_menu_items[3];
+    FuriString* main_menu_proto_items[3];
 
     DialogsApp* dialogs;
     FuriString* notification_msg;
